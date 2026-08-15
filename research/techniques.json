@@ -1,0 +1,82 @@
+[
+  {
+    "method": "Zero-Mean Normalized Cross-Correlation (ZNCC)",
+    "category": "Classical Template Matching",
+    "strengths": "Fast, invariant to global linear contrast and brightness offsets, simple sub-pixel quadratic fitting",
+    "weakness_in_sem": "Produces identical correlation peaks across periodic DRAM cells and FinFET gratings, leading to catastrophic 7-50px hops",
+    "complexity": "O(N * M * log(N)) with FFT or O(N * M * W * H) spatial",
+    "suitability_sem": "High as baseline / local refinement, Low as standalone global matcher"
+  },
+  {
+    "method": "2D FFT Phase Correlation",
+    "category": "Frequency Domain Registration",
+    "strengths": "Invariant to linear intensity changes and uniform illumination slopes, sharp delta-function peak for pure translations",
+    "weakness_in_sem": "Extremely vulnerable to high Poisson shot noise, local non-rigid charging streaks, and structural scale mismatches",
+    "complexity": "O(N * M * log(N * M))",
+    "suitability_sem": "Medium - best combined with bandpass spatial filtering"
+  },
+  {
+    "method": "Sobel & Scharr Gradient Magnitude Correlation",
+    "category": "Edge-Based Matching",
+    "strengths": "Eliminates low-frequency shading, emphasizes physical wafer line edges, contacts, and separator strip boundaries",
+    "weakness_in_sem": "Amplifies high-frequency detector noise if unregularized with Gaussian smoothing",
+    "complexity": "O(N * M)",
+    "suitability_sem": "Very High for resolving periodic intensity ambiguity"
+  },
+  {
+    "method": "Enhanced Correlation Coefficient (ECC)",
+    "category": "Parametric Image Alignment",
+    "strengths": "Estimates affine, Euclidean, and homography transformations directly with gradient descent optimization",
+    "weakness_in_sem": "Requires good initialization; gets trapped in local minima under periodic patterns",
+    "complexity": "O(iterations * N * M)",
+    "suitability_sem": "High for fine rotation/scale tuning, Low for initial global search"
+  },
+  {
+    "method": "SuperPoint + LightGlue",
+    "category": "Deep Keypoint Matching & GNN",
+    "strengths": "State-of-the-art sparse matching for natural RGB images with viewpoint and illumination changes",
+    "weakness_in_sem": "Pretrained on natural scenes (COCO); detectors trigger spurious corners on random SEM grain noise while missing regular line edges",
+    "complexity": "O(K^2) where K is number of keypoints (~1024)",
+    "suitability_sem": "Medium unless fine-tuned on SEM domain synthetic pairs"
+  },
+  {
+    "method": "LoFTR (Local Feature TRansformer)",
+    "category": "Detector-Free Dense Matching",
+    "strengths": "Matches textureless regions using self and cross-attention transformers without requiring keypoint detectors",
+    "weakness_in_sem": "Heavy GPU footprint (~150ms latency), receptive field attention can blur periodic array boundaries",
+    "complexity": "O(H*W * C) self-attention",
+    "suitability_sem": "High for coarse localization, requires sub-pixel refinement"
+  },
+  {
+    "method": "DINOv2 Deep Feature Retrieval",
+    "category": "Self-Supervised Vision Transformer",
+    "strengths": "Exceptional semantic patch embeddings; strong coarse region localization even across domain shifts",
+    "weakness_in_sem": "Coarse patch resolution (14x14 tokens), insufficient spatial resolution for 1-pixel sub-micron SEM metrology",
+    "complexity": "O(Tokens^2)",
+    "suitability_sem": "Excellent for coarse macro-zone retrieval (Stage 1), must be paired with fine matcher"
+  },
+  {
+    "method": "Laplacian of Gaussian (LoG) Multi-Scale Matching",
+    "category": "Scale-Space Feature Matching",
+    "strengths": "Extracts blob and contact hole structures at defined physical scale radii (e.g., DRAM storage nodes)",
+    "weakness_in_sem": "Computationally demanding across many octaves",
+    "complexity": "O(octaves * N * M)",
+    "suitability_sem": "High for contact array inspection"
+  },
+  {
+    "method": "Bandpass Spatial Frequency Filtering (Butterworth / Gaussian)",
+    "category": "Preprocessing & Frequency Regularization",
+    "strengths": "Removes low-frequency illumination gradients while suppressing high-frequency Poisson noise",
+    "weakness_in_sem": "Requires calibrated cutoff frequencies matching wafer pitch",
+    "complexity": "O(N * M * log(N))",
+    "suitability_sem": "Essential preprocessing step for all SEM matchers"
+  },
+  {
+    "method": "Spatial Grid & Topology Constraint Verification",
+    "category": "Structural Disambiguation",
+    "strengths": "Enforces that candidate matches must align with global die macro-topology (mat boundaries and separator strips)",
+    "weakness_in_sem": "Requires topology discovery module",
+    "complexity": "O(K log K) candidate verification",
+    "suitability_sem": "Critical for eliminating catastrophic periodic failure"
+  }
+]

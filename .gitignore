@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+.ipynb_checkpoints/
+results/evaluation/confusion_maps/

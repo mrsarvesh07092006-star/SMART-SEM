@@ -1,0 +1,42 @@
+[
+  {
+    "component": "1. Classical ZNCC Baseline (Fixed Scale)",
+    "pass_rate_5px_pct": 70.0,
+    "pass_rate_2px_pct": 66.66666666666666,
+    "pass_rate_1px_pct": 33.33333333333333,
+    "sub_pixel_05px_pct": 10.0,
+    "median_error_px": 1.2985393692794123,
+    "mean_error_px": 51.44223487984002,
+    "worst_error_px": 706.7178503476475
+  },
+  {
+    "component": "2. + 2D Sub-Pixel Quadratic Parabolic Fitting",
+    "pass_rate_5px_pct": 70.0,
+    "pass_rate_2px_pct": 66.66666666666666,
+    "pass_rate_1px_pct": 40.0,
+    "sub_pixel_05px_pct": 13.333333333333334,
+    "median_error_px": 1.3123560096221625,
+    "mean_error_px": 51.44539314779867,
+    "worst_error_px": 706.7333259777721
+  },
+  {
+    "component": "3. + Stage Memory & Kalman Prior Disambiguation",
+    "pass_rate_5px_pct": 90.0,
+    "pass_rate_2px_pct": 86.66666666666667,
+    "pass_rate_1px_pct": 56.666666666666664,
+    "sub_pixel_05px_pct": 20.0,
+    "median_error_px": 0.9535566682483471,
+    "mean_error_px": 2.5832737130081456,
+    "worst_error_px": 33.83514774932761
+  },
+  {
+    "component": "4. + Stage-Gated Local ROI + Full Multi-Domain Re-Ranker",
+    "pass_rate_5px_pct": 90.0,
+    "pass_rate_2px_pct": 86.66666666666667,
+    "pass_rate_1px_pct": 56.666666666666664,
+    "sub_pixel_05px_pct": 20.0,
+    "median_error_px": 0.9535566682483471,
+    "mean_error_px": 2.5832737130081456,
+    "worst_error_px": 33.83514774932761
+  }
+]

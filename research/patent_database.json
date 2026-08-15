@@ -1,0 +1,47 @@
+[
+  {
+    "patent_id": "US10453760B2",
+    "assignee": "Applied Materials, Inc.",
+    "title": "Systems and methods for die-to-database alignment and defect inspection in electron beam systems",
+    "core_idea": "Uses hierarchical coarse-to-fine alignment: coarse optical/SEM alignment followed by localized fine patch correlation with stage drift compensation",
+    "failure_case_noted": "Repetitive pattern cell confusion when FOV lacks unique alignment fiducials",
+    "can_use_in_smart_sem": true,
+    "smart_sem_adaptation": "Directly integrated as our Coarse-to-Fine Scale-Aware Matching + Navigation Drift Simulator"
+  },
+  {
+    "patent_id": "US9870902B2",
+    "assignee": "KLA-Tencor Corporation",
+    "title": "Method and apparatus for stage error compensation during semiconductor inspection",
+    "core_idea": "Models mechanical stage hysteresis, backlash, and laser interferometer drift over multi-step raster scan paths",
+    "failure_case_noted": "Uncompensated cumulative stage thermal expansion causing systematic coordinate offsets",
+    "can_use_in_smart_sem": true,
+    "smart_sem_adaptation": "Directly modeled in our `NavigationErrorSimulator` (backlash, thermal rate, drift)"
+  },
+  {
+    "patent_id": "US11282200B2",
+    "assignee": "Taiwan Semiconductor Manufacturing Company (TSMC)",
+    "title": "Method of SEM image alignment for periodic structures using phase information",
+    "core_idea": "Extracts 2D Fourier phase spectrum from periodic contact arrays to determine array pitch and eliminate integer-pitch alias ambiguity",
+    "failure_case_noted": "Phase unwrapping errors in high shot-noise inspection regimes",
+    "can_use_in_smart_sem": true,
+    "smart_sem_adaptation": "Implemented in `src/smart_sem/topology.py` (2D FFT pitch & orientation estimation)"
+  },
+  {
+    "patent_id": "US10929977B2",
+    "assignee": "ASML Netherlands B.V.",
+    "title": "Cross-modality wafer alignment system and method",
+    "core_idea": "Aligns optical alignment marks with electron-beam metrology scans using gradient orientation histograms invariant to imaging physics",
+    "failure_case_noted": "Contrast inversion and charging streak artifacts in e-beam images",
+    "can_use_in_smart_sem": true,
+    "smart_sem_adaptation": "Implemented in `src/smart_sem/cross_modal.py` (Modality-Invariant Structural Representation)"
+  },
+  {
+    "patent_id": "US10741460B2",
+    "assignee": "Carl Zeiss SMT GmbH",
+    "title": "Multi-beam SEM position determination with confusion matrix validation",
+    "core_idea": "Generates similarity confidence heatmaps across multiple beam channels to detect anomalous multi-peak matches in periodic gratings",
+    "failure_case_noted": "Single-threshold matchers selecting spurious noise peaks",
+    "can_use_in_smart_sem": true,
+    "smart_sem_adaptation": "Implemented in `src/smart_sem/confusion_intelligence.py` and `ambiguity_intelligence.py`"
+  }
+]

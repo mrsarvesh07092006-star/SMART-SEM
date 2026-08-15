@@ -1,0 +1,74 @@
+[
+  {
+    "repo": "kornia/kornia",
+    "url": "https://github.com/kornia/kornia",
+    "stars": "10k+",
+    "methods": "Differentiable Computer Vision, LoFTR, DISK, HardNet, Scale-Space Features, Affine Warping",
+    "pros": "GPU-accelerated PyTorch native operators, sub-pixel differentiable corner detection, batch processing",
+    "cons": "Requires PyTorch GPU runtime; heavy dependency overhead for edge deployment",
+    "relevance_to_sem": "Provides benchmark LoFTR and feature matching operators"
+  },
+  {
+    "repo": "cvg/LightGlue",
+    "url": "https://github.com/cvg/LightGlue",
+    "stars": "5k+",
+    "methods": "LightGlue: Local Feature Matching at Light Speed with Transformer pruning",
+    "pros": "Ultra-fast feature matching, adaptive depth early stopping, rejection of unmatchable points",
+    "cons": "Dependent on quality of input keypoint detector (SuperPoint/DISK)",
+    "relevance_to_sem": "Useful for sparse landmark matching across clean vs noisy pairs"
+  },
+  {
+    "repo": "zju3dv/LoFTR",
+    "url": "https://github.com/zju3dv/LoFTR",
+    "stars": "4k+",
+    "methods": "Detector-Free Local Feature Matching with Transformers",
+    "pros": "Matches low-texture regions through coarse-to-fine dense attention maps",
+    "cons": "Heavy compute; periodic repetitions produce diffused multi-modal attention",
+    "relevance_to_sem": "High reference for coarse-to-fine attention mechanisms"
+  },
+  {
+    "repo": "opencv/opencv",
+    "url": "https://github.com/opencv/opencv",
+    "stars": "75k+",
+    "methods": "matchTemplate (ZNCC, CCOEFF_NORMED), PhaseCorrelate, SIFT, ORB, ECC, createHanningWindow",
+    "pros": "Highly optimized C++ / Python bindings, CPU fast execution (<25ms), standard industry deployment",
+    "cons": "Classical methods require custom multi-stream fusion to handle periodic SEM ambiguity",
+    "relevance_to_sem": "Core backbone for low-latency production deployment"
+  },
+  {
+    "repo": "facebookresearch/segment-anything",
+    "url": "https://github.com/facebookresearch/segment-anything",
+    "stars": "45k+",
+    "methods": "SAM (Segment Anything Model) Promptable Visual Segmentation",
+    "pros": "Zero-shot structural boundary and mask segmentation",
+    "cons": "Very heavy model (>1GB weights), inference time >1s per frame",
+    "relevance_to_sem": "Topology extraction and macro separator strip segmentation"
+  },
+  {
+    "repo": "amazon-science/patchcore-inspection",
+    "url": "https://github.com/amazon-science/patchcore-inspection",
+    "stars": "2k+",
+    "methods": "PatchCore: Memory-guided Memory Bank Patch Nearest Neighbor Anomaly & Localization",
+    "pros": "Coreset subsampling, memory retrieval without retraining, robust to subtle deviations",
+    "cons": "Designed for anomaly detection rather than sub-pixel coordinate regression",
+    "relevance_to_sem": "Direct inspiration for Wafer Memory Graph and Historical Defect Priors"
+  },
+  {
+    "repo": "facebookresearch/dinov2",
+    "url": "https://github.com/facebookresearch/dinov2",
+    "stars": "12k+",
+    "methods": "DINOv2: Learning Robust Visual Features without Supervision",
+    "pros": "Dense semantic feature tokens, invariant to severe noise and contrast degradation",
+    "cons": "14px patch token grid limits fine registration",
+    "relevance_to_sem": "Stage 1 Coarse Macro-Zone Retrieval"
+  },
+  {
+    "repo": "Parskatt/DeDoDe",
+    "url": "https://github.com/Parskatt/DeDoDe",
+    "stars": "1.5k+",
+    "methods": "DeDoDe: Detect, Don't Displace - Decoupled Feature Detector & Descriptor",
+    "pros": "Accurate keypoint positioning without descriptor-driven spatial displacement",
+    "cons": "Requires GPU for fast inference",
+    "relevance_to_sem": "Sub-pixel keypoint accuracy on repetitive semiconductor corners"
+  }
+]

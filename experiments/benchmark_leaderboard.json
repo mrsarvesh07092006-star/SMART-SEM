@@ -1,0 +1,37 @@
+[
+  {
+    "method": "Classical ZNCC Baseline",
+    "total_tested": 30,
+    "pass_rate_5px_pct": 70.0,
+    "pass_rate_4px_pct": 70.0,
+    "pass_rate_2px_pct": 66.67,
+    "pass_rate_1px_pct": 33.33,
+    "sub_pixel_05px_pct": 10.0,
+    "mean_error_px": 51.44,
+    "median_error_px": 1.30,
+    "worst_error_px": 706.72,
+    "mean_runtime_ms": 13.5,
+    "failure_breakdown": {
+      "SUCCESS_PASS": 21,
+      "TYPE_A_PERIODIC_AMBIGUITY": 6,
+      "TYPE_E_FEATURE_STARVATION": 3
+    }
+  },
+  {
+    "method": "SMART-SEM Industrial Re-Ranker",
+    "total_tested": 30,
+    "pass_rate_5px_pct": 90.0,
+    "pass_rate_4px_pct": 90.0,
+    "pass_rate_2px_pct": 86.67,
+    "pass_rate_1px_pct": 56.67,
+    "sub_pixel_05px_pct": 20.0,
+    "mean_error_px": 2.58,
+    "median_error_px": 0.95,
+    "worst_error_px": 33.84,
+    "mean_runtime_ms": 173.0,
+    "failure_breakdown": {
+      "SUCCESS_PASS": 27,
+      "TYPE_A_PERIODIC_AMBIGUITY": 3
+    }
+  }
+]
