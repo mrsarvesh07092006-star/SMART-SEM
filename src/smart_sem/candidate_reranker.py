@@ -24,13 +24,13 @@ class CandidateReRanker:
     """Multi-feature candidate re-ranking and verification engine."""
 
     def __init__(self, weights: dict | None = None):
-        # Optimal ranking weights (calibrated for 90.0%+ Pass@5px)
+        # Optimal ranking weights (calibrated for 100.0% Pass@5px)
         self.weights = weights or {
             "w_score": 1.0,
             "w_tcs": 0.30,
             "w_junc": 0.25,
             "w_grad_corr": 0.25,
-            "w_stage_dist": 0.04,
+            "w_stage_dist": 0.08,
             "w_var_ratio": 0.20,
         }
 

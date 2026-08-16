@@ -136,7 +136,8 @@ def smart_sem_localize(
 
             if rx1 > rx0 and ry1 > ry0:
                 roi_res = best_score_map[ry0:ry1, rx0:rx1].copy()
-                for _ in range(5):
+                local_nms_radius = 3  # Matches FinFET fin pitch (3.0 px)
+                for _ in range(15):
                     _, r_val, _, r_loc = cv2.minMaxLoc(roi_res)
                     if r_val < 0.1 or math.isnan(r_val):
                         break
@@ -146,7 +147,7 @@ def smart_sem_localize(
                     rcx = sub_x + tw / 2.0
                     rcy = sub_y + th / 2.0
 
-                    if not any(math.hypot(rcx - c["center_x"], rcy - c["center_y"]) < 4.0 for c in candidates):
+                    if not any(math.hypot(rcx - c["center_x"], rcy - c["center_y"]) < 2.0 for c in candidates):
                         candidates.append({
                             "rank": len(candidates) + 1,
                             "center_x": float(rcx),
@@ -157,8 +158,8 @@ def smart_sem_localize(
                             "th": th,
                         })
 
-                    roi_res[max(0, r_loc[1]-nms_radius):min(roi_res.shape[0], r_loc[1]+nms_radius+1),
-                            max(0, r_loc[0]-nms_radius):min(roi_res.shape[1], r_loc[0]+nms_radius+1)] = -1.0
+                    roi_res[max(0, r_loc[1]-local_nms_radius):min(roi_res.shape[0], r_loc[1]+local_nms_radius+1),
+                            max(0, r_loc[0]-local_nms_radius):min(roi_res.shape[1], r_loc[0]+local_nms_radius+1)] = -1.0
 
     entropy = compute_spatial_entropy(best_score_map)
 

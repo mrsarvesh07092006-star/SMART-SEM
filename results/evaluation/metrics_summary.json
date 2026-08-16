@@ -5,8 +5,8 @@
   "pass_rate_2px_pct": 86.66666666666667,
   "pass_rate_1px_pct": 56.666666666666664,
   "pass_rate_05px_pct": 20.0,
-  "mean_error_px": 2.583273713008145,
+  "mean_error_px": 1.7183423300281178,
   "median_error_px": 0.9535566682483471,
-  "worst_case_error_px": 33.835147749327604,
-  "mean_runtime_ms": 192.84580666571856
+  "worst_case_error_px": 8.632088483466553,
+  "mean_runtime_ms": 245.29312333346147
 }

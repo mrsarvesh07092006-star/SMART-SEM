@@ -26,8 +26,8 @@
     "pass_rate_1px_pct": 56.666666666666664,
     "sub_pixel_05px_pct": 20.0,
     "median_error_px": 0.9535566682483471,
-    "mean_error_px": 2.5832737130081456,
-    "worst_error_px": 33.83514774932761
+    "mean_error_px": 1.718342330028118,
+    "worst_error_px": 8.632088483466553
   },
   {
     "component": "4. + Stage-Gated Local ROI + Full Multi-Domain Re-Ranker",
@@ -36,7 +36,7 @@
     "pass_rate_1px_pct": 56.666666666666664,
     "sub_pixel_05px_pct": 20.0,
     "median_error_px": 0.9535566682483471,
-    "mean_error_px": 2.5832737130081456,
-    "worst_error_px": 33.83514774932761
+    "mean_error_px": 1.718342330028118,
+    "worst_error_px": 8.632088483466553
   }
 ]
