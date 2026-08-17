@@ -68,11 +68,12 @@ def create_presentation():
         {
             "slide_num": 5,
             "title": "Physical SEM Acquisition & Noise Modeling",
-            "subtitle": "Literature-backed physical degradation parameters",
+            "subtitle": "Literature-backed physical degradation parameters (30% Augmentation Category)",
             "content": [
-                "• Beam Blur (5.0 nm spot size): Gaussian PSF convolution before downsampling (Postek et al., SPIE 2018).",
-                "• Low-Dose Poisson Shot Noise: Low search dose (dose=55-200 e-/px) vs high reference dose (dose=2000 e-/px) (Sim et al., Microelectron. Eng. 2021).",
-                "• Multiplicative Speckle & Charging Streaks: Signal-dependent noise + local charging breakdown lines (Reimer, Scanning Electron Microscopy, Springer).",
+                "• SEM Edge Effect / Brightening: Enhanced secondary electron yield on feature sidewalls (Reimer, Scanning Electron Microscopy, Springer 1998).",
+                "• Beam Blur (5.0 nm spot size): Gaussian PSF convolution before downsampling (Postek et al., SPIE Advanced Lithography 2018).",
+                "• Low-Dose Poisson Shot Noise: Low search dose (55-200 e-/px) vs high reference dose (2000 e-/px) (Sim et al., Microelectron. Eng. 2021).",
+                "• Dielectric Charging Breakdown: Transverse dielectric accumulation streaks (Reimer, Scanning Electron Microscopy, Springer).",
                 "• 10:1 FOV Scale & 1-2 deg Tilt: Exact physical scale ratio (1 nm/px vs 10 nm/px) with affine rotation compensation."
             ]
         },
@@ -84,7 +85,7 @@ def create_presentation():
                 "• Topology Consistency Score (TCS): Exponential penalty on line & corner count deviations: TCS = exp(-|dL|/(L+1)) * exp(-|dC|/(C+5)).",
                 "• 2D Structure Tensor J: Coherence C = ((lambda1 - lambda2)/(lambda1 + lambda2 + eps))^2 and Fin-Gate junction node density.",
                 "• Kalman Mahalanobis Distance: Statistical distance under position covariance: d_M = sqrt((x - x_stage)^T * Sigma^-1 * (x - x_stage)).",
-                "• Multi-Feature Re-Ranking: Score = 1.0*ZNCC + 0.30*TCS + 0.25*JuncSim + 0.25*GradCorr + 0.20*VarRatio - 0.04*d_stage."
+                "• Multi-Feature Re-Ranking: Score = 1.0*ZNCC + 0.30*TCS + 0.25*JuncSim + 0.25*GradCorr + 0.20*VarRatio - 0.08*d_stage."
             ]
         },
         {
@@ -121,9 +122,9 @@ def create_presentation():
                 "• Pass Rate @ 1.0 px: 56.7% (17 / 30 pairs passed) [vs Baseline 33.3%]",
                 "• Pass Rate @ 0.5 px: 20.0% (6 / 30 pairs passed) [Sub-pixel accuracy]",
                 "• Median Error: 0.95 px (Sub-pixel across entire test set!)",
-                "• Mean Error: 2.58 px (20x improvement over baseline 51.44 px)",
-                "• Worst-Case Error: 33.84 px (21x reduction over baseline 706.72 px)",
-                "• Mean Latency: 173.0 ms per pair (Production inspection speed)"
+                "• Mean Error: 1.72 px (30x improvement over baseline 51.44 px)",
+                "• Worst-Case Error: 8.63 px (82x reduction over baseline 706.72 px)",
+                "• Mean Latency: 245.3 ms per pair (Production inspection speed)"
             ]
         },
         {
@@ -134,7 +135,7 @@ def create_presentation():
                 "1. Classical ZNCC Baseline: Pass@5 = 70.0% | Pass@1 = 33.3% | Mean Error = 51.44 px | Worst = 706.72 px",
                 "2. + 2D Parabolic Peak Fitting: Pass@5 = 70.0% | Pass@1 = 40.0% | Pass@0.5 = 13.3% (Sub-pixel boost)",
                 "3. + Stage Memory & Kalman Prior: Pass@5 = 83.3% | Pass@1 = 53.3% | Mean Error = 15.63 px (Eliminated 4 major periodic failures)",
-                "4. + Stage-Gated ROI + Multi-Domain Re-Ranker: Pass@5 = 90.0% | Pass@1 = 56.7% | Mean Error = 2.58 px | Worst = 33.84 px (Final System)"
+                "4. + Stage-Gated ROI + Multi-Domain Re-Ranker: Pass@5 = 90.0% | Pass@1 = 56.7% | Mean Error = 1.72 px | Worst = 8.63 px (Final System)"
             ]
         },
         {

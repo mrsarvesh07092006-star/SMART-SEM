@@ -50,6 +50,23 @@ def apply_vignette(img: np.ndarray, strength: float) -> np.ndarray:
     return np.clip(out, 0, 255).astype(np.uint8)
 
 
+def apply_sem_edge_brightening(img: np.ndarray, strength: float = 0.30) -> np.ndarray:
+    """SEM Edge Effect: Secondary electrons escape with higher yield along steep
+    sidewalls and geometric edges of nanoscale features, producing distinctive
+    edge-brightening contrast along all line boundaries.
+    Reference: L. Reimer, Scanning Electron Microscopy (Springer, 1998);
+               M. T. Postek et al., SPIE Advanced Lithography (2018).
+    """
+    if strength <= 0:
+        return img
+    gx = cv2.Sobel(img.astype(np.float32), cv2.CV_32F, 1, 0, ksize=3)
+    gy = cv2.Sobel(img.astype(np.float32), cv2.CV_32F, 0, 1, ksize=3)
+    edge_mag = np.sqrt(gx**2 + gy**2)
+    edge_norm = edge_mag / (np.max(edge_mag) + 1e-6)
+    brightened = img.astype(np.float32) + (strength * 255.0 * edge_norm)
+    return np.clip(brightened, 0, 255).astype(np.uint8)
+
+
 def apply_gamma(img: np.ndarray, gamma: float) -> np.ndarray:
     """Nonlinear contrast/brightness response curve (detector gain nonlinearity
     or contrast/brightness knob mis-calibration). gamma=1.0 is a no-op.
@@ -195,6 +212,7 @@ def image_reference(
     salt_pepper_prob: float = 0.0,
 ) -> np.ndarray:
     img = gaussian_psf_blur(crop, spot_size_nm, pixel_size_nm, astigmatism_ratio)
+    img = apply_sem_edge_brightening(img, strength=0.25)
     img = apply_raster_drift(img, shear_amplitude_px=0.0, jitter_std_px=drift_jitter_px, rng=rng)
     img = apply_barrel_distortion(img, barrel_distortion_k)
     img = add_shot_noise(img, dose, rng)
@@ -228,7 +246,8 @@ def image_search(
 ) -> np.ndarray:
     factor = int(round(pixel_size_search_nm / pixel_size_ref_nm))
     blurred = gaussian_psf_blur(full_canvas, spot_size_nm, pixel_size_ref_nm, astigmatism_ratio)
-    downsampled = downsample_area_average(blurred, factor)
+    brightened = apply_sem_edge_brightening(blurred, strength=0.20)
+    downsampled = downsample_area_average(brightened, factor)
     drifted = apply_raster_drift(downsampled, shear_amplitude_px, drift_jitter_px, rng)
     distorted = apply_barrel_distortion(drifted, barrel_distortion_k)
     noisy = add_shot_noise(distorted, dose, rng)
