@@ -114,8 +114,8 @@ class CandidateReRanker:
         if not candidates:
             return {}, []
 
-        # If unambiguous (margin >= 1.08), trust peak 1 directly
-        if confidence_margin >= 1.08 and len(candidates) > 0:
+        # If exceptionally unambiguous (margin >= 1.30) AND no stage prior provided, trust peak 1 directly
+        if confidence_margin >= 1.30 and stage_prior_xy is None and len(candidates) > 0:
             return candidates[0], candidates
 
         # Compute normalized gradient reference template

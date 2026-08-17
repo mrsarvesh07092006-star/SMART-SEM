@@ -687,5 +687,44 @@
     "category": "TYPE_A_PERIODIC_AMBIGUITY",
     "is_failure": true,
     "description": "Locked onto adjacent periodic cell (k_x=2, k_y=0 at pitch=4.9px)"
+  },
+  {
+    "sample_id": "pair_0013",
+    "architecture": "finfet_10nm",
+    "gt_x": 148.2,
+    "gt_y": 631.4,
+    "pred_x": 151.14896392822266,
+    "pred_y": 639.0995483398438,
+    "error_px": 8.244964092556708,
+    "confidence": 0.5677381753921509,
+    "category": "TYPE_A_PERIODIC_AMBIGUITY",
+    "is_failure": true,
+    "description": "Locked onto adjacent periodic cell (k_x=1, k_y=2 at pitch=3.9px)"
+  },
+  {
+    "sample_id": "pair_0015",
+    "architecture": "finfet_10nm",
+    "gt_x": 125.1,
+    "gt_y": 487.4,
+    "pred_x": 128.30625915527344,
+    "pred_y": 494.9619140625,
+    "error_px": 8.213564516055765,
+    "confidence": 0.7557315230369568,
+    "category": "TYPE_A_PERIODIC_AMBIGUITY",
+    "is_failure": true,
+    "description": "Locked onto adjacent periodic cell (k_x=1, k_y=2 at pitch=3.9px)"
+  },
+  {
+    "sample_id": "pair_0029",
+    "architecture": "finfet_10nm",
+    "gt_x": 752.4,
+    "gt_y": 660.8,
+    "pred_x": 761.0320434570312,
+    "pred_y": 660.827880859375,
+    "error_px": 8.632088483466553,
+    "confidence": 0.7728287577629089,
+    "category": "TYPE_A_PERIODIC_AMBIGUITY",
+    "is_failure": true,
+    "description": "Locked onto adjacent periodic cell (k_x=2, k_y=0 at pitch=4.9px)"
   }
 ]
