@@ -1,0 +1,24 @@
+{
+  "model_name": "SMART-SEM Physics-Informed Candidate Re-Ranker",
+  "version": "1.2.0",
+  "feature_dimension": 6,
+  "features": [
+    "peak_score",
+    "topology_consistency_score",
+    "finfet_junction_similarity",
+    "sobel_gradient_correlation",
+    "stage_prior_distance",
+    "local_variance_ratio"
+  ],
+  "weights": {
+    "w_score": 1.0,
+    "w_tcs": 0.30,
+    "w_junc": 0.25,
+    "w_grad_corr": 0.25,
+    "w_stage_dist": 0.08,
+    "w_var_ratio": 0.20
+  },
+  "subpixel_fitting": "2D Taylor-Series Quadratic Parabolic Interpolation",
+  "uncertainty_temperature": 0.08,
+  "ambiguity_ratio_threshold": 1.05
+}

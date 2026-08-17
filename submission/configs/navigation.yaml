@@ -1,0 +1,6 @@
+drift_sigma_nm: 2.5
+backlash_max_nm: 3.0
+thermal_rate_nm: 0.5
+vibration_sigma_nm: 1.0
+coord_system_bias_nm: 0.0
+cumulative_steps: 5

@@ -1,0 +1,239 @@
+{
+  "sample_id": "pair_0013",
+  "architecture": "finfet_10nm",
+  "error_px": 53.73975070286573,
+  "gt_x": 148.2,
+  "gt_y": 631.4,
+  "pred_x": 151.02880096435547,
+  "pred_y": 685.0652465820312,
+  "confidence_score": 0.5944862961769104,
+  "peak_ratio": 0.989105624528332,
+  "confidence_margin": 1.0110109501314786,
+  "entropy": 0.8896858714846455,
+  "failure_category": "TYPE_B_SCALE_OR_ROTATION_MISMATCH",
+  "diagnosis_description": "Non-rigid deformation or magnification mismatch",
+  "pitch_nm": 39.21568627450981,
+  "pitch_px_search": 3.9215686274509807,
+  "top_10_candidates": [
+    {
+      "rank": 1,
+      "center_x": 151.02880096435547,
+      "center_y": 685.0652465820312,
+      "score": 0.5944862961769104,
+      "top_left": [
+        101,
+        635
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.058010148236126,
+      "features": {
+        "peak_score": 0.5944862961769104,
+        "tcs": 0.7949384802207988,
+        "grad_corr": 0.41726192831993103,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.603634129564965
+      },
+      "probability": 0.12583046063271533
+    },
+    {
+      "rank": 2,
+      "center_x": 143.0909423828125,
+      "center_y": 685.0640869140625,
+      "score": 0.5880107283592224,
+      "top_left": [
+        93,
+        635
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.0472004752769375,
+      "features": {
+        "peak_score": 0.5880107283592224,
+        "tcs": 0.7852955563153393,
+        "grad_corr": 0.4131569266319275,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.6015592418256569
+      },
+      "probability": 0.10992678336014251
+    },
+    {
+      "rank": 3,
+      "center_x": 158.98895263671875,
+      "center_y": 685.0570068359375,
+      "score": 0.5861805081367493,
+      "top_left": [
+        109,
+        635
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.0447037529370762,
+      "features": {
+        "peak_score": 0.5861805081367493,
+        "tcs": 0.794365611806191,
+        "grad_corr": 0.39888760447502136,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.6024583006985713
+      },
+      "probability": 0.10654905709727154
+    },
+    {
+      "rank": 4,
+      "center_x": 71.8516731262207,
+      "center_y": 685.0518188476562,
+      "score": 0.5843217968940735,
+      "top_left": [
+        22,
+        635
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.0446776028165459,
+      "features": {
+        "peak_score": 0.5843217968940735,
+        "tcs": 0.8032012145196423,
+        "grad_corr": 0.3989890217781067,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.5982409306102653
+      },
+      "probability": 0.10651423440537297
+    },
+    {
+      "rank": 5,
+      "center_x": 166.9431915283203,
+      "center_y": 685.0585327148438,
+      "score": 0.5822454690933228,
+      "top_left": [
+        117,
+        635
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.0385300849965318,
+      "features": {
+        "peak_score": 0.5822454690933228,
+        "tcs": 0.7938120238852483,
+        "grad_corr": 0.3930618166923523,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.5993777728227321
+      },
+      "probability": 0.0986358375785124
+    },
+    {
+      "rank": 6,
+      "center_x": 135.15836334228516,
+      "center_y": 685.054931640625,
+      "score": 0.5809425711631775,
+      "top_left": [
+        85,
+        635
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.0360480029236019,
+      "features": {
+        "peak_score": 0.5809425711631775,
+        "tcs": 0.7849553252267167,
+        "grad_corr": 0.39562681317329407,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.6035606544954288
+      },
+      "probability": 0.09562254646593342
+    },
+    {
+      "rank": 7,
+      "center_x": 147.07125091552734,
+      "center_y": 708.0308227539062,
+      "score": 0.5793390870094299,
+      "top_left": [
+        97,
+        658
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.0352160088052222,
+      "features": {
+        "peak_score": 0.5793390870094299,
+        "tcs": 0.7876990658166291,
+        "grad_corr": 0.3958796560764313,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.6029864401584785
+      },
+      "probability": 0.0946332323269132
+    },
+    {
+      "rank": 10,
+      "center_x": 79.8133773803711,
+      "center_y": 685.0493774414062,
+      "score": 0.5753724575042725,
+      "top_left": [
+        30,
+        635
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.0307917325841112,
+      "features": {
+        "peak_score": 0.5753724575042725,
+        "tcs": 0.8022074871753148,
+        "grad_corr": 0.38224107027053833,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.5959838067980484
+      },
+      "probability": 0.08954177307865012
+    },
+    {
+      "rank": 9,
+      "center_x": 63.86725997924805,
+      "center_y": 685.0535888671875,
+      "score": 0.5754291415214539,
+      "top_left": [
+        14,
+        635
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.0290654647957946,
+      "features": {
+        "peak_score": 0.5754291415214539,
+        "tcs": 0.7846499026142603,
+        "grad_corr": 0.395841121673584,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.5964053603583338
+      },
+      "probability": 0.08763030690529787
+    },
+    {
+      "rank": 8,
+      "center_x": 147.11351776123047,
+      "center_y": 662.0897827148438,
+      "score": 0.5788463950157166,
+      "top_left": [
+        97,
+        612
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.0267362968532097,
+      "features": {
+        "peak_score": 0.5788463950157166,
+        "tcs": 0.7809595828510705,
+        "grad_corr": 0.3796446621417999,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.5934543072336101
+      },
+      "probability": 0.08511576814919075
+    }
+  ]
+}

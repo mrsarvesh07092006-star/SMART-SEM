@@ -1,0 +1,239 @@
+{
+  "sample_id": "pair_0010",
+  "architecture": "dram_1x",
+  "error_px": 29.66667989730656,
+  "gt_x": 708.7,
+  "gt_y": 603.8,
+  "pred_x": 679.0333251953125,
+  "pred_y": 603.8173828125,
+  "confidence_score": 0.8661743998527527,
+  "peak_ratio": 0.9999022406543803,
+  "confidence_margin": 0.9999022406543803,
+  "entropy": 0.8883556376392197,
+  "failure_category": "TYPE_A_PERIODIC_AMBIGUITY",
+  "diagnosis_description": "Locked onto adjacent periodic cell (k_x=4, k_y=0 at pitch=7.1px)",
+  "pitch_nm": 71.24704998790965,
+  "pitch_px_search": 7.124704998790965,
+  "top_10_candidates": [
+    {
+      "rank": 2,
+      "center_x": 679.0333251953125,
+      "center_y": 603.8173828125,
+      "score": 0.8661743998527527,
+      "top_left": [
+        629,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.5165287749170626,
+      "features": {
+        "peak_score": 0.8661743998527527,
+        "tcs": 0.8050103173146875,
+        "grad_corr": 0.8488406538963318,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.9832055819791037
+      },
+      "probability": 0.11635692906992685
+    },
+    {
+      "rank": 1,
+      "center_x": 635.98095703125,
+      "center_y": 603.8213500976562,
+      "score": 0.8662580847740173,
+      "top_left": [
+        586,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.5160000666741182,
+      "features": {
+        "peak_score": 0.8662580847740173,
+        "tcs": 0.8035880279790584,
+        "grad_corr": 0.8473685383796692,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.9841171945573303
+      },
+      "probability": 0.11559047869451713
+    },
+    {
+      "rank": 3,
+      "center_x": 707.7415161132812,
+      "center_y": 603.81298828125,
+      "score": 0.8656690716743469,
+      "top_left": [
+        658,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.5149327450895447,
+      "features": {
+        "peak_score": 0.8656690716743469,
+        "tcs": 0.8061599776305372,
+        "grad_corr": 0.8416316509246826,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.9850388369743304
+      },
+      "probability": 0.11405856776627663
+    },
+    {
+      "rank": 4,
+      "center_x": 722.0712280273438,
+      "center_y": 603.8154296875,
+      "score": 0.8642799258232117,
+      "top_left": [
+        672,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.5132486931468123,
+      "features": {
+        "peak_score": 0.8642799258232117,
+        "tcs": 0.8070048450852103,
+        "grad_corr": 0.842415988445282,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.9813165834335857
+      },
+      "probability": 0.11168265583854328
+    },
+    {
+      "rank": 7,
+      "center_x": 794.042724609375,
+      "center_y": 603.8125,
+      "score": 0.8527410626411438,
+      "top_left": [
+        744,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.5043407226346872,
+      "features": {
+        "peak_score": 0.8527410626411438,
+        "tcs": 0.8252055221693726,
+        "grad_corr": 0.840355634689331,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.9697454733519948
+      },
+      "probability": 0.09991419704489526
+    },
+    {
+      "rank": 5,
+      "center_x": 750.8390502929688,
+      "center_y": 603.8074951171875,
+      "score": 0.8588056564331055,
+      "top_left": [
+        701,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.5041414498728767,
+      "features": {
+        "peak_score": 0.8588056564331055,
+        "tcs": 0.8078613313655973,
+        "grad_corr": 0.8344222903251648,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.971859107244004
+      },
+      "probability": 0.09966562952814974
+    },
+    {
+      "rank": 6,
+      "center_x": 765.2135620117188,
+      "center_y": 603.815673828125,
+      "score": 0.8540652394294739,
+      "top_left": [
+        715,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.503114604096745,
+      "features": {
+        "peak_score": 0.8540652394294739,
+        "tcs": 0.8260652254541221,
+        "grad_corr": 0.8273252248764038,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.971992454059667
+      },
+      "probability": 0.09839453918144453
+    },
+    {
+      "rank": 8,
+      "center_x": 664.7203369140625,
+      "center_y": 603.8161010742188,
+      "score": 0.8486180901527405,
+      "top_left": [
+        615,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.4932530547605192,
+      "features": {
+        "peak_score": 0.8486180901527405,
+        "tcs": 0.806152578750321,
+        "grad_corr": 0.829969048500061,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.976484644288336
+      },
+      "probability": 0.08698328203671735
+    },
+    {
+      "rank": 9,
+      "center_x": 650.3519897460938,
+      "center_y": 603.8280639648438,
+      "score": 0.8433079719543457,
+      "top_left": [
+        600,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.4864160598948053,
+      "features": {
+        "peak_score": 0.8433079719543457,
+        "tcs": 0.8048511854629281,
+        "grad_corr": 0.8210530281066895,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.981947376374543
+      },
+      "probability": 0.07985827522114394
+    },
+    {
+      "rank": 10,
+      "center_x": 693.3472290039062,
+      "center_y": 603.8220825195312,
+      "score": 0.8407032489776611,
+      "top_left": [
+        643,
+        554
+      ],
+      "tw": 100,
+      "th": 100,
+      "ranking_score": 1.4840133130586175,
+      "features": {
+        "peak_score": 0.8407032489776611,
+        "tcs": 0.8055529780545776,
+        "grad_corr": 0.8204652070999146,
+        "stage_dist": 0.0,
+        "mahalanobis_dist": 0.0,
+        "var_ratio": 0.9826393444480221
+      },
+      "probability": 0.07749544561838535
+    }
+  ]
+}

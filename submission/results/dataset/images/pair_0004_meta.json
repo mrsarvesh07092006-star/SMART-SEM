@@ -1,0 +1,47 @@
+{
+  "sample_id": "pair_0004",
+  "architecture": "dram_1x",
+  "seed": 446,
+  "gt_x": 106.1,
+  "gt_y": 884.3,
+  "nav_dx_px": -0.8845747201649447,
+  "nav_dy_px": -0.20411769020491058,
+  "obs_gt_x": 105.21542527983505,
+  "obs_gt_y": 884.095882309795,
+  "navigation_report": {
+    "n_steps": 1,
+    "cumulative_offset_nm": [
+      -8.845747201649447,
+      -2.0411769020491057
+    ],
+    "cumulative_offset_px_at_10nm": [
+      -0.8845747201649447,
+      -0.20411769020491058
+    ],
+    "euclidean_nav_error_nm": 9.078196225073999,
+    "euclidean_nav_error_px": 0.9078196225073999
+  },
+  "params": {
+    "beam_spot_size_nm": 5.0,
+    "collapse_threshold_nm": 10.0,
+    "dose_reference": 2000.0,
+    "dose_search": 200.0,
+    "shear_amplitude_px": 1.5,
+    "drift_jitter_px": 0.5,
+    "detector_noise_sigma_ref": 2.0,
+    "detector_noise_sigma_search": 5.0,
+    "astigmatism_ratio": 1.0,
+    "vignette_strength": 0.0,
+    "gamma": 1.0,
+    "barrel_distortion_k": 0.0,
+    "charging_streak_prob": 3.0,
+    "charging_streak_intensity": 2.0,
+    "speckle_sigma": 0.0,
+    "salt_pepper_prob": 0.0,
+    "mat_size_nm": 2600.0,
+    "strip_width_nm": 320.0,
+    "boundary_bias": 0.35,
+    "linewidth_bias_nm": 0.0,
+    "corner_rounding_px": 0.0
+  }
+}
