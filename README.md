@@ -89,25 +89,29 @@ smart-sem/
 
 ## 🛠️ Quickstart Commands
 
-### 1. Installation & Environment
+### 1. Standalone Single-Pair Inference (Evaluator Script)
+Run on any reference and search image pair to output the predicted center `(x, y)`:
 ```bash
-pip install -r requirements.txt
+python infer.py --reference path/to/reference.png --search path/to/search.png
+# OR positional arguments:
+python infer.py path/to/reference.png path/to/search.png
 ```
+*Outputs: `(x, y)` coordinates directly to stdout without manual configuration.*
 
 ### 2. Dataset Generation (30 Varied Pairs)
 ```bash
 python generate_dataset.py --num-samples 30 --out-dir results/dataset
 ```
 
-### 3. Batch Localization & Metric Evaluation
+### 3. Batch Localization & Metric Leaderboard
 ```bash
-python localize.py --manifest results/dataset/manifest.csv --out-dir results/evaluation
+python run_benchmark.py
 ```
 
 ### 4. Run Ablation & Generalization Benchmarks
 ```bash
-python experiments/ablation_study.py
-python experiments/generalization_benchmark.py
+python run_ablation.py
+python run_generalization.py
 ```
 
 ### 5. Run Automated Unit Tests
