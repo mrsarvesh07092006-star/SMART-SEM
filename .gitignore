@@ -9,3 +9,5 @@ __pycache__/
 *.swo
 .ipynb_checkpoints/
 results/evaluation/confusion_maps/
+scratch/
+
